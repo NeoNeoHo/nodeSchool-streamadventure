@@ -5,4 +5,6 @@ var write = function write(buf, encoding, next) {
 	next();
 };
 
-process.stdin.pipe(through(write)).pipe(process.stdout);
+process.stdin
+	.pipe(through(write))
+	.pipe(process.stdout);
